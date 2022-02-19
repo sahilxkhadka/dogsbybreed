@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #50C9C3;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #96DEDA, #50C9C3);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #96DEDA, #50C9C3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.app {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  text-align: center;
+  padding: 20px 0;
+}
+.header h1 {
+  margin: 0 0 10px 0;
+}
+.header select {
+  font-size: 1rem;
+  border: none;
+  padding: 0.5ch 1ch;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+.header select option {
+  color: #000000;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.slideshow {
+  flex: 1;
+  /* background-color: #333; */
+  position: relative;
+  overflow: hidden;
+}
+.slide {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1);
+  transition: all 0.9s ease-in-out;
+}
+.slide:nth-last-child(2) {
+  opacity: 1;
+  transform: scale(1.08);
+}
